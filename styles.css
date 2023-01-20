@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #D4D4D4;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc-wrap {
+    margin: 9vh;
+    background-color: #161a1d ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vh;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+}
+
+.calculadora-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 75vh;
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    grid-template-columns: repeat(4, 100px);
+}
+
+.calculadora-container > .display {
+    grid-column: 1 / -1;
+}
+
+textarea {
+    background-color: black;
+    outline: none;
+    border: none;
+    resize: none;
+    width: 100%;
+    height: 180px;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+button {
+    border-radius: 50%;
+    border: none;
+    margin: 5px;
+    transition: all ease 0.3s;
+    font-weight: 600;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover{
+    background-color: #D3D3D3;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.zero-button {
+    border-radius: 50px;
+    margin: 5px;
+    border: none;
+    background-color: #5A5A5A;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.og-button {
+    background-color: orange;
+}
+
+button.divide:after{
+    content: "÷";
+    position: absolute;
+    background-color: orange;
+    transition: all ease 0.3s;
+}
+
+button.divide:hover:after{
+    background-color: #D3D3D3;
+}
+
+button.multiply:after{
+    content: "x";
+    position: absolute;
+    background-color: orange;
+    transition: all ease 0.3s;
+}
+
+button.multiply:hover:after{
+    background-color: #D3D3D3;
+}
+
+.dg-button {
+    background-color: #5A5A5A;
+    color: white;
+}
+
+small {
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: all ease 0.5s;
+}
+
+a:hover {
+    color: red;
+    transform: scale(1.08);
+}
